@@ -1,24 +1,61 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import PageFooter from '../components/PageFooter';
 import SideBar from '../components/SideBar';
 
-import pic2 from '../assets/images/pic02.jpg';
-import pic3 from '../assets/images/pic03.jpg';
-import pic4 from '../assets/images/pic04.jpg';
-import pic5 from '../assets/images/pic05.jpg';
-import pic6 from '../assets/images/pic06.jpg';
-import pic7 from '../assets/images/pic07.jpg';
-import pic8 from '../assets/images/pic08.jpg';
+import pic9 from '../assets/images/pic09.jpg';
 import Scroll from '../components/Scroll';
 
 const sections = [
   { id: 'top', name: 'Intro', icon: 'fa-home' },
-  { id: 'portfolio', name: 'Portfolio', icon: 'fa-th' },
   { id: 'about', name: 'About Me', icon: 'fa-user' },
+  { id: 'skills', name: 'Skills', icon: 'fa-cogs' },
+  { id: 'portfolio', name: 'Portfolio', icon: 'fa-th' },
   { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
 ];
+
+const AboutContainer = styled.div`
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const AboutMyImage = styled.div`
+  display: flex;
+  flex: 1;
+  border-radius: 10%;
+  overflow: hidden;
+  max-width: 270px;
+  min-width: 250px;
+  margin-right: 40px;
+  @media (max-width: 768px) {
+    width: 60%;
+    margin: 0 auto 28px;
+    min-width: auto;
+  }
+`;
+
+const AboutText = styled.div`
+  flex: 2;
+  text-align: left;
+  font-size: 16px;
+  line-height: 2;
+  @media (max-width: 768px) {
+    line-height: 1.5;
+    font-size: 13px;
+  }
+`;
+
+const PaddingTop = styled.div`
+  padding-top: 24px;
+  @media (max-width: 768px) {
+    padding-top: 14px;
+  }
+`;
 
 const IndexPage = () => (
   <Layout>
@@ -28,25 +65,71 @@ const IndexPage = () => (
       <section id="top" className="one dark cover">
         <div className="container">
           <header>
-            <h2 className="alt">
-              Hi! I'm <strong>Anubhav</strong>
-              <br />
-              Web developer
-            </h2>
-            <p>I have made few things check it out.</p>
+            <h2 className="alt">I'm @keitoku1993</h2>
+            <h2>Web Frontend Developer</h2>
+            <p>
+              I've made few things,
+              <br /> please check it out!
+            </p>
           </header>
 
           <footer>
             <Scroll type="id" element={'portfolio'}>
               <a href="#portfolio" className="button">
-                Show me
+                Show me!
               </a>
             </Scroll>
           </footer>
         </div>
       </section>
 
-      <section id="portfolio" className="two">
+      <section id="about" className="two">
+        <div className="container">
+          <header>
+            <h2>About Me</h2>
+          </header>
+
+          <AboutContainer>
+            <AboutMyImage>
+              <img style={{ width: '100%' }} src={pic9} alt="" />
+            </AboutMyImage>
+
+            <AboutText>
+              初めまして、東京都在住の徳永と申します。
+              <br />
+              新卒からITの世界に飛び込み、現在3年目(2社目)になります。
+              <PaddingTop>
+                1社目では大手証券系Sierで主にシステム設計とPMO業務を経験しました。
+                <br />
+                そして現職では、HTML/CSSを使った基本的なマークアップから、JavaScriptでの複雑なUIやログの実装など、フロントエンド全般の開発を生業としています。
+              </PaddingTop>
+              <PaddingTop>
+                理系出身ということもあり、とにかくモノづくりが好きで土日のどちらかは一日中個人開発をしていることがほとんどです。最近はフロントエンドにとどまらず、バックエンドの知識も積極的に蓄えています。
+              </PaddingTop>
+              <PaddingTop>
+                若輩者ではありますが、お互いの求めるモノがマッチすれば、ぜひ一緒にお仕事をさせて頂ければと思います！
+              </PaddingTop>
+            </AboutText>
+          </AboutContainer>
+        </div>
+      </section>
+
+      <section id="skills" className="three">
+        <div className="container">
+          <header>
+            <h2>Skills</h2>
+          </header>
+
+          <p>
+            Life will feel it is always a great need for eu valley, the valley
+            CNN ridiculous smile at any time chat mainstream clinical homes.
+            Mauris floor was very warm and we need it. One customer now nibh
+            Bureau dark pools behavior.
+          </p>
+        </div>
+      </section>
+
+      <section id="portfolio" className="four">
         <div className="container">
           <header>
             <h2>Portfolio</h2>
@@ -58,101 +141,14 @@ const IndexPage = () => (
             Mauris floor was very warm and we need it. One customer now nibh
             Bureau dark pools behavior.
           </p>
-
-          <div className="row">
-            <div className="col-4 col-12-mobile">
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={pic2} alt="" />
-                </a>
-                <header>
-                  <h3>Ipsum Feugiat</h3>
-                </header>
-              </article>
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={pic3} alt="" />
-                </a>
-                <header>
-                  <h3>Rhoncus Semper</h3>
-                </header>
-              </article>
-            </div>
-            <div className="col-4 col-12-mobile">
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={pic4} alt="" />
-                </a>
-                <header>
-                  <h3>Magna Nullam</h3>
-                </header>
-              </article>
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={pic5} alt="" />
-                </a>
-                <header>
-                  <h3>Natoque Vitae</h3>
-                </header>
-              </article>
-            </div>
-            <div className="col-4 col-12-mobile">
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={pic6} alt="" />
-                </a>
-                <header>
-                  <h3>Dolor Penatibus</h3>
-                </header>
-              </article>
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={pic7} alt="" />
-                </a>
-                <header>
-                  <h3>Orci Convallis</h3>
-                </header>
-              </article>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section id="about" className="three">
-        <div className="container">
-          <header>
-            <h2>About Me</h2>
-          </header>
-
-          <a href="/#" className="image featured">
-            <img src={pic8} alt="" />
-          </a>
-
-          <p>
-            Developers football competition in diameter big price to layer the
-            pot. Chavez ultricies care who wants to CNN. Lobortis elementum
-            aliquet eget a den of which they do not hold it in hatred developers
-            nor the mountains of the deposit slip. The element of time, sem ante
-            ullamcorper dolor nulla quam placerat viverra environment is not
-            with our customers. Free makeup and skirt until the mouse or
-            partners or to decorate each targeted.
-          </p>
-        </div>
-      </section>
-
-      <section id="contact" className="four">
+      <section id="contact" className="five">
         <div className="container">
           <header>
             <h2>Contact</h2>
           </header>
-
-          <p>
-            The element of time, sem ante ullamcorper dolor nulla quam placerat
-            viverra environment is not with our customers. Free makeup and skirt
-            until the mouse. Japan this innovative and ultricies carton salad
-            clinical ridiculous now passes from enhanced. Mauris pot innovative
-            care for my pain.
-          </p>
 
           <form method="post" action="#">
             <div className="row">
