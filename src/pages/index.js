@@ -32,6 +32,7 @@ const AboutMyImage = styled.div`
   max-width: 270px;
   min-width: 250px;
   margin-right: 40px;
+  align-items: center;
   @media (max-width: 768px) {
     width: 60%;
     margin: 0 auto 28px;
