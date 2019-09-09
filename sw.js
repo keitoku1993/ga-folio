@@ -26,31 +26,31 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-3b46746d8db288a42881.js"
+    "url": "webpack-runtime-55585dc5ac8aee2250b7.js"
   },
   {
-    "url": "commons.de62cd091bceec05003b.css"
+    "url": "commons.f51b4e16b6554d470078.css"
   },
   {
-    "url": "commons-181f6078cc24c5e1a25e.js"
+    "url": "commons-6df8e0bda68d489d76f5.js"
   },
   {
-    "url": "app-62bd74607aeb484f0530.js"
+    "url": "app-d5c447e8d95137844042.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-c73644c0ef1d722b3bdb.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "eb2b75d006e2233532b3007dcc1fe00d"
+    "revision": "c68cb97abc2b1b9c1b59008eae61bf91"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "784017ee5f2d37b316b29f2005bf51fc"
+    "revision": "35d3a4cfe06f51c82e591c9b875f8b90"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "903b47d88c383db40ca02170045f2f6e"
+    "revision": "26782b043ef2a562cbd1355adfbcc121"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -69,12 +69,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/gatsby-starter-prologue`), ``)
+  pathname = pathname.replace(new RegExp(`^/ga-folio`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/gatsby-starter-prologue/app-62bd74607aeb484f0530.js`))) {
+  if (!resources || !(await caches.match(`/ga-folio/app-d5c447e8d95137844042.js`))) {
     return await fetch(event.request)
   }
 
@@ -87,7 +87,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/gatsby-starter-prologue/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/ga-folio/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
