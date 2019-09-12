@@ -34,6 +34,7 @@ const Title = styled.div`
   top: -22px;
   background-color: #ecf1f1;
   padding: 0px 14px;
+  background-image: url(/static/overlay-b0e5941….png);
   @media (max-width: 768px) {
     font-size: 18px;
   }

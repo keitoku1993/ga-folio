@@ -19,15 +19,7 @@ const sections = [
 
 const languages = {
   title: 'Languages',
-  tags: [
-    'HTML/CSS',
-    'Sass',
-    'JaveScript',
-    'TypeScript',
-    'Node.js',
-    'PHP',
-    'Go',
-  ],
+  tags: ['HTML/CSS', 'Sass', 'JaveScript', 'TypeScript', 'Node.js', 'Go'],
 };
 
 const frameworks = {
@@ -37,7 +29,7 @@ const frameworks = {
 
 const others = {
   title: 'Others',
-  tags: ['Git', 'Sass', 'Linux', 'gulp', 'webpack', 'mongoDB'],
+  tags: ['Git', 'Linux', 'gulp', 'webpack', 'mongoDB', 'Photoshop'],
 };
 
 const AboutContainer = styled.div`
