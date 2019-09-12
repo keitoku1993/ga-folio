@@ -33,8 +33,7 @@ const Title = styled.div`
   position: absolute;
   top: -22px;
   background-color: #ecf1f1;
-  padding: 0px 14px;
-  background-image: url(/static/overlay-b0e5941….png);
+  padding: 0px 4px;
   @media (max-width: 768px) {
     font-size: 18px;
   }
