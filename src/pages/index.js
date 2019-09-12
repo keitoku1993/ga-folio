@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import PageFooter from '../components/PageFooter';
 import SideBar from '../components/SideBar';
+import SkillTag from '../components/SkillTag';
 
 import pic9 from '../assets/images/pic09.jpg';
 import Scroll from '../components/Scroll';
@@ -15,6 +16,29 @@ const sections = [
   { id: 'portfolio', name: 'Portfolio', icon: 'fa-th' },
   { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
 ];
+
+const languages = {
+  title: 'Languages',
+  tags: [
+    'HTML/CSS',
+    'Sass',
+    'JaveScript',
+    'TypeScript',
+    'Node.js',
+    'PHP',
+    'Go',
+  ],
+};
+
+const frameworks = {
+  title: 'Framework & Library',
+  tags: ['React', 'Redux', 'Gatsby.js', 'Next.js', 'Express', 'jQuery'],
+};
+
+const others = {
+  title: 'Others',
+  tags: ['Git', 'Sass', 'Linux', 'gulp', 'webpack', 'mongoDB'],
+};
 
 const AboutContainer = styled.div`
   display: flex;
@@ -55,6 +79,14 @@ const PaddingTop = styled.div`
   padding-top: 24px;
   @media (max-width: 768px) {
     padding-top: 14px;
+  }
+`;
+
+const SkillCassette = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  @media (max-width: 768px) {
+    display: block;
   }
 `;
 
@@ -121,12 +153,11 @@ const IndexPage = () => (
             <h2>Skills</h2>
           </header>
 
-          <p>
-            Life will feel it is always a great need for eu valley, the valley
-            CNN ridiculous smile at any time chat mainstream clinical homes.
-            Mauris floor was very warm and we need it. One customer now nibh
-            Bureau dark pools behavior.
-          </p>
+          <SkillCassette>
+            <SkillTag {...languages} />
+            <SkillTag {...frameworks} />
+            <SkillTag {...others} />
+          </SkillCassette>
         </div>
       </section>
 
