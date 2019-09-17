@@ -7,6 +7,9 @@ import SideBar from '../components/SideBar';
 import SkillTag from '../components/SkillTag';
 import Works from '../components/Works';
 
+import instagramImage from '../assets/images/instagram.png';
+import sinImage from '../assets/images/react_sin.png';
+import portfolioImage from '../assets/images/portfolio.png';
 import pic9 from '../assets/images/pic09.jpg';
 import Scroll from '../components/Scroll';
 
@@ -53,7 +56,7 @@ const others = {
 const instagram = {
   title: 'Instagram(clone)',
   url: 'https://murmuring-scrubland-68188.herokuapp.com/',
-  mvPath: './static/instagram.png',
+  mvPath: instagramImage,
   skills: 'React/Redux/Node.js/mongoDB/Heroku',
   gitUrl: 'hogehoge',
 };
@@ -61,7 +64,7 @@ const instagram = {
 const reactSin = {
   title: 'Sincurve Generator',
   url: 'https://agitated-kirch-241f36.netlify.com/',
-  mvPath: './static/react_sin.png',
+  mvPath: sinImage,
   skills: 'React/canvas/Netlify',
   gitUrl: 'hogehoge',
 };
@@ -69,7 +72,7 @@ const reactSin = {
 const portfolio = {
   title: 'Portfolio',
   url: 'https://keitoku1993.github.io/ga-folio/',
-  mvPath: './static/portfolio.png',
+  mvPath: portfolioImage,
   skills: 'Gatsby.js',
   gitUrl: 'hogehoge',
 };
