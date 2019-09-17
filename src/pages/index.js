@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import PageFooter from '../components/PageFooter';
 import SideBar from '../components/SideBar';
 import SkillTag from '../components/SkillTag';
+import Works from '../components/Works';
 
 import pic9 from '../assets/images/pic09.jpg';
 import Scroll from '../components/Scroll';
@@ -24,12 +25,53 @@ const languages = {
 
 const frameworks = {
   title: 'Framework & Library',
-  tags: ['React', 'Redux', 'Gatsby.js', 'Next.js', 'Express', 'jQuery'],
+  tags: [
+    'React',
+    'Redux',
+    'Gatsby.js',
+    'Next.js',
+    'Express',
+    'jQuery',
+    'canvas',
+  ],
 };
 
 const others = {
   title: 'Others',
-  tags: ['Git', 'Linux', 'gulp', 'webpack', 'mongoDB', 'Photoshop'],
+  tags: [
+    'Git',
+    'Linux',
+    'gulp',
+    'webpack',
+    'mongoDB',
+    'Heroku',
+    'Netlify',
+    'Photoshop',
+  ],
+};
+
+const instagram = {
+  title: 'Instagram(clone)',
+  url: 'https://murmuring-scrubland-68188.herokuapp.com/',
+  mvPath: './static/instagram.png',
+  skills: 'React/Redux/Node.js/mongoDB/Heroku',
+  gitUrl: 'hogehoge',
+};
+
+const reactSin = {
+  title: 'Sincurve Generator',
+  url: 'https://agitated-kirch-241f36.netlify.com/',
+  mvPath: './static/react_sin.png',
+  skills: 'React/canvas/Netlify',
+  gitUrl: 'hogehoge',
+};
+
+const portfolio = {
+  title: 'Portfolio',
+  url: 'https://keitoku1993.github.io/ga-folio/',
+  mvPath: './static/portfolio.png',
+  skills: 'Gatsby.js',
+  gitUrl: 'hogehoge',
 };
 
 const AboutContainer = styled.div`
@@ -77,6 +119,14 @@ const PaddingTop = styled.div`
 const SkillCassette = styled.div`
   display: flex;
   justify-content: space-evenly;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const WorksLayout = styled.div`
+  display: flex;
+  justify-content: space-between;
   @media (max-width: 768px) {
     display: block;
   }
@@ -158,13 +208,11 @@ const IndexPage = () => (
           <header>
             <h2>Portfolio</h2>
           </header>
-
-          <p>
-            Life will feel it is always a great need for eu valley, the valley
-            CNN ridiculous smile at any time chat mainstream clinical homes.
-            Mauris floor was very warm and we need it. One customer now nibh
-            Bureau dark pools behavior.
-          </p>
+          <WorksLayout>
+            <Works {...instagram} />
+            <Works {...reactSin} />
+            <Works {...portfolio} />
+          </WorksLayout>
         </div>
       </section>
 

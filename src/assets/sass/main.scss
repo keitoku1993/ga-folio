@@ -311,11 +311,6 @@ a {
     ('color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out')
   );
   outline: 0;
-
-  &:hover {
-    color: #e27689;
-    border-bottom-color: rgba(255, 255, 255, 0);
-  }
 }
 
 sub {
