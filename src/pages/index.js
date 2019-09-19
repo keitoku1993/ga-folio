@@ -23,7 +23,7 @@ const sections = [
 
 const languages = {
   title: 'Languages',
-  tags: ['HTML/CSS', 'Sass', 'JaveScript', 'TypeScript', 'Node.js', 'Go'],
+  tags: ['HTML/CSS', 'Sass', 'JaveScript', 'TypeScript', 'Node.js'],
 };
 
 const frameworks = {
@@ -57,8 +57,8 @@ const instagram = {
   title: 'Instagram(clone)',
   url: 'https://murmuring-scrubland-68188.herokuapp.com/',
   mvPath: instagramImage,
-  skills: 'React/Redux/Node.js/mongoDB/Heroku',
-  gitUrl: 'hogehoge',
+  skills: 'React/Redux/Express/mongoDB/Heroku',
+  gitUrl: 'https://github.com/kittyguys/instagram',
 };
 
 const reactSin = {
@@ -66,7 +66,7 @@ const reactSin = {
   url: 'https://agitated-kirch-241f36.netlify.com/',
   mvPath: sinImage,
   skills: 'React/canvas/Netlify',
-  gitUrl: 'hogehoge',
+  gitUrl: 'https://github.com/keitoku1993/react-sin',
 };
 
 const portfolio = {
@@ -74,7 +74,7 @@ const portfolio = {
   url: 'https://keitoku1993.github.io/ga-folio/',
   mvPath: portfolioImage,
   skills: 'Gatsby.js',
-  gitUrl: 'hogehoge',
+  gitUrl: 'https://github.com/keitoku1993/ga-folio',
 };
 
 const AboutContainer = styled.div`
